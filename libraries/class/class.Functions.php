@@ -49,7 +49,7 @@
         	@$name = $data['name'];
         	@$CACHE = (strpos($resize, 'watermark') == false) ? CACHE : "";
         	@$path = $CACHE.$resize.'/'.$dir.$photo;
-        	@$result = "<img onerror=src='".ASSETS."images/noimage.png' src=".$path." alt='".$name."' title='".$name."'>";
+        	@$result = "<img  src=".$path." alt='".$name."' title='".$name."'>";
         	return $result;
         }
         public function get_photoSelect($type, $resize, $link=false)

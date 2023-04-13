@@ -4,8 +4,8 @@
 ?>
 <!DOCTYPE html>
 <html lang="vi">
-    <head>
-        <?php require_once LAYOUT."seo-head.php"; ?>
+	<head>
+		<?php require_once LAYOUT."seo-head.php"; ?>
         <?php require_once LAYOUT."base-css.php"; ?>
         <?=$func->decode($optsetting['headjs'])?>
     </head>
