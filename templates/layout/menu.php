@@ -12,52 +12,25 @@
 	</div>
 
 	<div class="menu nav-menu container d-block">
-		<ul class="d-flex justify-content-start align-items-center">
-			<li class="search d-flex justify-content-between">
-		        <input class="keyword" onKeyPress="doEnter(event);" placeholder="<?=_timkiem?>">
+		<ul class="d-flex justify-content-center align-items-center">
+			<!-- <li class="search d-flex justify-content-between">
+		        <input class="keyword" onKeyPress="doEnter(event);" placeholder="<?= _timkiem ?>">
 		        <i class="fa fa-search" onclick="onSearch(event);"></i>
-		    </li>
+		    </li> -->
 
-		    <li class="backInLeft">
-		    	<a class="<?=($com=='' || $com=='index') ? "active" : ""?>" href=""><?=_trangchu?></a>
-		    </li>
-
-		    <li class="line"></li>
-
-		    <li class="backInLeft">
-		    	<a class="<?=($type=='about') ? "active" : ""?>" href="gioi-thieu"><?=_gioithieu?></a>
-		    </li>
-
-		    <li class="line"></li>
-
-		    <li class="backInLeft">
-		    	<a class="<?=($type=='product') ? "active" : ""?>" href="san-pham"><?=_sanpham?></a>
-		    	<?=$func->ShowMultiMenu("product", "product", $config['theme']['product']['level']);?>
-		    </li>
-
-		    <li class="line"></li>
-
-		    <li class="backInLeft">
-		    	<a class="<?=($type=='service') ? "active" : ""?>" href="dich-vu"><?=_dichvu?></a>
-	    	</li>
-
-		    <li class="line"></li>
-
-		    <li class="backInLeft">
-		    	<a class="<?=($type=='news') ? "active" : ""?>" href="tin-tuc"><?=_tintuc?></a>
-	    	</li>
-
-		    <li class="line"></li>
-
-		    <li class="backInLeft">
-		    	<a class="<?=($type=='video') ? "active" : ""?>" href="video">Video</a>
+			<li class="backInLeft">
+				<a class="<?= ($com == '' || $com == 'index') ? "active" : "" ?>" href=""><?= _trangchu ?></a>
 			</li>
 
-		    <li class="line"></li>
+			<?= $func->ShowMultiMenu("product", "product", $config['theme']['product']['level']); ?>
 
-		    <li class="backInLeft">
-		    	<a class="<?=($type=='contact') ? "active" : ""?>" href="lien-he"><?=_lienhe?></a>
-	    	</li>
+			<li class="backInLeft">
+				<a class="<?= ($type == 'service') ? "active" : "" ?>" href="dich-vu"><?= _dichvu ?></a>
+			</li>
+
+			<li class="backInLeft">
+				<a class="<?= ($type == 'contact') ? "active" : "" ?>" href="lien-he"><?= _lienhe ?></a>
+			</li>
 		</ul>
 	</div>
 </section>

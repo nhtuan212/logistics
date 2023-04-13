@@ -22,6 +22,7 @@
 	</div>
 </section>
 
+<?php /* ?>
 <section class="cover-about py-4">
 	<div class="container">
 		<div class="row justify-content-between">
@@ -36,6 +37,7 @@
 		</div>
 	</div>
 </section>
+<?php */ ?>
 
 <section class="cover-hotProduct py-4">
 	<div class="container">

@@ -290,7 +290,7 @@
 			$menu_lv2 = $this->db->rawQuery("select id, id_lv1, name$lang as name, tenkhongdau, photo from #_category where level=2 and FIND_IN_SET(id_lv1, '".$this->joinAttr($menu_lv1, 'id')."') $where $order_by");
 			$menu_lv3 = $this->db->rawQuery("select id, id_lv1, id_lv2, name$lang as name, tenkhongdau, photo from #_category where level=3 and FIND_IN_SET(id_lv2, '".$this->joinAttr($menu_lv2, 'id')."') $where $order_by");
 
-			$result = '<ul>';
+			$result = '<ul class="d-flex align-items-center">';
 				if($level == 0)
 				{
 					foreach($menu as $i => $item) {
