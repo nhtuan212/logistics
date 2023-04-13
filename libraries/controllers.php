@@ -91,8 +91,8 @@ $pro_detail = $d->rawQueryOne("select *, name$lang as name, descript$lang as des
 $post_detail = $d->rawQueryOne("select *, name$lang as name, descript$lang as descript, content$lang as content FROM #_post where FIND_IN_SET('display', status) and tenkhongdau!='' and tenkhongdau=?", array($com));
 
 $arr_template = array('product',);
-if (in_array($category['type'], $arr_template)) if ($category) Route::get('product@product/product@article', $category['type'], $category['name']);
-if (!in_array($category['type'], $arr_template)) if ($category) Route::get('post@post/post@article', $category['type'], $category['name']);
+if (!empty($category['type']) && in_array($category['type'], $arr_template)) if ($category) Route::get('product@product/product@article', $category['type'], $category['name']);
+if (!empty($category['type']) && !in_array($category['type'], $arr_template)) if ($category) Route::get('post@post/post@article', $category['type'], $category['name']);
 if ($pro_detail) Route::get('product@product/product_detail@article', $pro_detail['type'], $pro_detail['name']);
 if ($post_detail) Route::get('post@post/post_detail@article', $post_detail['type'], $post_detail['name']);
 

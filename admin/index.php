@@ -67,7 +67,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <?php include LAYOUT."css_admin.php";?>
     </head>
-    <body class="hold-transition skin-blue sidebar-mini <?=((!$_SESSION[$login_admin]) && ($_SESSION[$login_admin] == 0)) ? "login-page" : ""?>">
+    <body class="hold-transition skin-blue sidebar-mini <?=((empty($_SESSION[$login_admin]))) ? "login-page" : ""?>">
         <?php if(isset($_SESSION[$login_admin]) && ($_SESSION[$login_admin] == 1)) { ?>
             <div class="wrapper">
                 <?php include LAYOUT."header_admin.php";?>

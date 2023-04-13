@@ -44,9 +44,12 @@ $config = array(
 		'error_reporting' => true,
 	),
 	'theme' => array(
-		'product' => array('tbl' => 'product', 'dir' => UPLOAD_PRODUCT_L, 'column' => 'photo', 'size' => '285x220x1', 'level' => '2',),
-		'news'    => array('tbl' => 'post', 'dir' => UPLOAD_POST_L, 'column' => 'photo', 'size' => '285x220x1', 'level' => '0'),
-		'policy'  => array('tbl' => 'post', 'dir' => UPLOAD_POST_L, 'column' => 'photo', 'size' => '285x220x1', 'level' => '0'),
+		'product'   => array('tbl' => 'product', 'dir' => UPLOAD_PRODUCT_L, 'column' => 'photo', 'size' => '285x220x1', 'level' => '1',),
+		'news'      => array('tbl' => 'post',    'dir' => UPLOAD_POST_L,    'column' => 'photo', 'size' => '285x220x1', 'level' => '0'),
+		'utilities' => array('tbl' => 'post',    'dir' => UPLOAD_POST_L,    'column' => 'photo', 'size' => '285x220x1', 'level' => '0'),
+		'service'   => array('tbl' => 'post',    'dir' => UPLOAD_POST_L,    'column' => 'photo', 'size' => '285x220x1', 'level' => '0'),
+		'support'   => array('tbl' => 'post',    'dir' => UPLOAD_POST_L,    'column' => 'photo', 'size' => '285x220x1', 'level' => '0'),
+		// 'policy' => array('tbl' => 'post', 'dir'    => UPLOAD_POST_L, 'column'    => 'photo', 'size' => '285x220x1', 'level' => '0'),
 	),
 );
 error_reporting(($config['developer']['error_reporting']) ? E_ALL : 0);

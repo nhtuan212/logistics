@@ -2,7 +2,7 @@
     class AddonsOnline
     {
         public function __construct(){}
-        private function addonTemplate($url, $width, $height, $type, $kind="", $timeOut)
+        private function addonTemplate($url, $width, $height, $type, $kind="", $timeOut="")
         {
             $class = $type;
             $css = ($type == 'map') ? 'style="position: relative;width:'.$width.';height:'.$height.'px"' : '';

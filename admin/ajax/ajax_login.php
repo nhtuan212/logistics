@@ -28,8 +28,11 @@
 		}
 	}
 
+	$cacheFile = new CacheFile($d);
 	$login = $d->rawQueryOne("select * from #_user where username=?", array($username));
-	$options = (isset($item['options']) && $item['options'] != '') ? json_decode($item['options'],true) : null;
+	$sqlCache = "select * from #_setting";
+	$setting = $cacheFile->getCache($sqlCache, 'fetch', 7200);
+	$options = (isset($setting['options']) && $setting['options'] != '') ? json_decode($setting['options'],true) : null;
 	if($login && $login['password'] == $func->encrypt_password($config['login']['salt'], $password))
 	{
 		//dang nhap thanh cong
@@ -122,4 +125,3 @@
 
 	$data = array('success' => @$success, 'failed' => @$failed);
 	echo json_encode($data);
-?>

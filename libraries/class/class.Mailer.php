@@ -45,7 +45,7 @@
 				</div>';
 			return $result;
 		}
-		public function sendEmail($arr_email=array(), $messages, $success, $failed, $redirect='index', $file=false)
+		public function sendEmail($arr_email=array(), $messages = '', $success = '', $failed = '', $redirect='index', $file=false)
 		{
 			global $func;
 			$mail = new PHPMailer(true);

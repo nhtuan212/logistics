@@ -1442,7 +1442,7 @@ class PDODb
 
 		return $queryLogs;
 	}
-	public function createlogs($user = 'Unnamed', $act, $com, $id)
+	public function createlogs($user = 'Unnamed', $act = '', $com = '', $id = '')
 	{
 		$logsfile = $_SERVER['DOCUMENT_ROOT'] . $this->connectionParams['php_self'] . "logs";
 
