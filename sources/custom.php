@@ -1,11 +1,11 @@
 <?php
 	if(!defined('SOURCE')) die("Error");
-	// foreach ($category_group as $i => $category_item)
-	// {
-	// 	$custom_category[$category_item['type']][] = $category_item;
-	// 	$level_category[$category_item['type']][$category_item['level']][] = $category_item;
-	// 	if (strpos($category_item['status'], 'hot') !== false) $hot_category[$category_item['type']][] = $category_item;
-	// }
+	foreach ($category_group as $i => $category_item)
+	{
+		$custom_category[$category_item['type']][] = $category_item;
+		$level_category[$category_item['type']][$category_item['level']][] = $category_item;
+		if (strpos($category_item['status'], 'hot') !== false) $hot_category[$category_item['type']][] = $category_item;
+	}
 	foreach ($product_group as $i => $product_item)
 	{
 		$custom_product[$product_item['type']][] = $product_item;

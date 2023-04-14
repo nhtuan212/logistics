@@ -11,7 +11,7 @@
 	--light: 300;--regular: 400;--medium: 500;--bold: 700;--black: 900;
 	--awesome__font: 900 20px/1 "Font Awesome 5 Free";
 	--line__height: 1.5;
-	--font__title: var(--bold) 30px/var(--line__height) var(--title__font);
+	--font__title: var(--bold) 20px/var(--line__height) var(--title__font);
 	--item__margin: 10px;
 	--item__width: calc((100% / 4) - (var(--item__margin)*2));
 	--item__page__margin: 10px;

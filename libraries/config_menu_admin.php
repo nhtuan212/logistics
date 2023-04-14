@@ -151,7 +151,7 @@
 		$config['product-lv'.($i+1)][$type_menu]['seo'] = true;
 		$config['product-lv'.($i+1)][$type_menu]['slug'] = true;
 		$config['product-lv'.($i+1)][$type_menu]['view'] = true;
-		$config['product-lv'.($i+1)][$type_menu]['attr'] = array("display"=>"Hiển thị");
+		$config['product-lv'.($i+1)][$type_menu]['attr'] = array("display"=>"Hiển thị", "hot" => "Nổi bật");
 		$config['product-lv'.($i+1)][$type_menu]['text'] = array(
 			"name" => array("text" => "Tên","lang" => true,"ckeditor" => false,"rows" => 1,"type" => 'input',"validate" => true,"data_type" => "varchar","length" => "(255)",),
 		);
@@ -178,6 +178,9 @@
 	$config['product'][$type_menu]['text'] = array
 	(
 		"name" => array("text" => "Tên","lang" => true,"ckeditor" => false,"rows" => 1,"type" => 'input',"validate" => true,"data_type" => "varchar","length" => "(255)",),
+		"place_from" => array("text" => "Nơi khởi hành","lang" => true,"ckeditor" => false,"rows" => 1,"type" => 'input',"data_type" => "text","length" => "",),
+		"place_to" => array("text" => "Điểm đến","lang" => true,"ckeditor" => false,"rows" => 1,"type" => 'input',"data_type" => "text","length" => "",),
+		"date_tour" => array("text" => "Số ngày","lang" => false,"ckeditor" => false,"rows" => 1,"type" => 'input',"data_type" => "text","length" => "",),
 		"descript" => array("text" => "Mô tả","lang" => true,"ckeditor" => false,"rows" => 5,"type" => 'textarea',"data_type" => "text","length" => "",),
 		"content" => array("text" => "Nội dung","lang" => true,"ckeditor" => true,"rows" => 5,"type" => 'textarea',"data_type" => "text","length" => "",),
 	);

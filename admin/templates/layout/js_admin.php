@@ -629,7 +629,7 @@
     </script>
 <?php } ?>
 
-<?php if($source == 'order') { ?>
+<?php if($source == 'order' || $source == 'product') { ?>
     <script src="<?=ASSETS?>plugins/daterangepicker/moment.min.js"></script>
     <script src="<?=ASSETS?>plugins/daterangepicker/daterangepicker.js"></script>
     <script type="text/javascript">

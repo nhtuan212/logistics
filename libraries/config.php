@@ -39,7 +39,7 @@ $config = array(
 		'debug'           => true,
 		'responsive'      => true,
 		'mobile'          => false,
-		'cart'            => false,
+		'cart'            => true,
 		'lock_index'      => false,
 		'error_reporting' => true,
 	),
