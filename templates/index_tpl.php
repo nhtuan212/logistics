@@ -22,6 +22,12 @@
 	</div>
 </section>
 
+<section class="cover-book-tour py-md-4 py-3">
+	<div class="container">
+		<?php require_once LAYOUT . "newsletter.php"; ?>
+	</div>
+</section>
+
 <?php /* ?>
 <section class="cover-about py-4">
 	<div class="container">
@@ -62,11 +68,17 @@
 								</div>
 								<div class="info p-2 position-relative">
 									<h3 class="name mb-2 line-2"><?= $item['name'] ?></h3>
+									<?php if (!empty($item['place_from'])) { ?>
+										<div class="place_from text-white p-2"><?= $item['place_from'] ?></div>
+									<?php } ?>
 									<?php if (!empty($item['date_tour'])) { ?>
 										<div class="date_tour"><i class="far fa-clock mr-1"></i><?= $item['date_tour'] ?></div>
 									<?php } ?>
-									<?php if (!empty($item['place_from'])) { ?>
-										<div class="place_from text-white p-2"><?= $item['place_from'] ?></div>
+									<?php if (!empty($item['date_from'])) { ?>
+										<div class="date_from"><i class="far fa-calendar mr-1"></i><?= date('d/m/Y', $item['date_from']) ?></div>
+									<?php } ?>
+									<?php if (!empty($item['remain'])) { ?>
+										<div class="remain"><i class="far fa-user mr-1"></i><?= $item['remain'] ?></div>
 									<?php } ?>
 									<p class="price text-right font-weight-bold"><?= $func->price($item['price'], $item['old_price']) ?></p>
 								</div>
@@ -82,45 +94,61 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
-				<p class="title"><?= _tintucnoibat ?></p>
-				<div class="row">
-					<div class="col-md-6">
+				<div class="d-flex flex-wrap">
+					<div class="col-sm-4">
+						<p class="title text-md"><?= _tintuc ?> & cẩm nang du lịch</p>
 						<a href="<?= $hot_post['news'][0]['tenkhongdau'] ?>">
-							<div class="img hvr-opa">
-								<?= $func->get_photo(array('dir' => $config['theme']['news']['dir'], 'photo' => $hot_post['news'][0]['photo'], 'name' => $hot_post['news'][0]['name'], 'resize' => '390x220x1',)); ?>
-							</div>
 							<div class="info">
-								<h3 class="name my-2"><?= $hot_post['news'][0]['name'] ?></h3>
-								<p class="desc line-2"><?= $hot_post['news'][0]['descript'] ?></p>
+								<h3 class="name mt-2 mb-3 line-3"><?= $hot_post['news'][0]['name'] ?></h3>
+								<p class="desc line-8"><?= $hot_post['news'][0]['descript'] ?></p>
 							</div>
 						</a>
 					</div>
-					<div class="col-md-6 slick__page mt-n1" :show="3" :autoplay="false" :autoplay="false" :vertical="true">
-						<?php if (!empty($hot_post['news'])) { ?>
-							<?php foreach ($hot_post['news'] as $i => $item) { ?>
-								<?php if ($i > 0) { ?>
-									<a class="item-news py-2" href="<?= $item['tenkhongdau'] ?>">
-										<div class="row justify-content-between">
-											<div class="img hvr-opa col-5 img-object">
-												<?= $func->get_photo(array('dir' => $config['theme']['news']['dir'], 'photo' => $item['photo'], 'name' => $item['name'], 'resize' => '150x110x1',)); ?>
-											</div>
-											<div class="info col-7">
-												<h3 class="name line-1 mb-1"><?= $item['name'] ?></h3>
-												<p class="desc line-3"><?= $item['descript'] ?></p>
-											</div>
-										</div>
-									</a>
-								<?php } ?>
-							<?php } ?>
-						<?php } ?>
+					<div class="col-sm-8">
+						<a href="<?= $hot_post['news'][0]['tenkhongdau'] ?>">
+							<div class="img">
+								<?= $func->get_photo(array('dir' => $config['theme']['news']['dir'], 'photo' => $hot_post['news'][0]['photo'], 'name' => $hot_post['news'][0]['name'], 'resize' => '500x350x1',)); ?>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
-
-			<div class="col-md-4">
-				<p class="title">Video</p>
-				<?= $addon->addonOnline("", '100%', 255, "video", "slick") ?>
+			<div class="col-md-4 slick__page mt-n1" :show="3" :autoplay="false" :autoplay="false" :vertical="true">
+				<?php if (!empty($hot_post['news'])) { ?>
+					<?php foreach ($hot_post['news'] as $i => $item) { ?>
+						<?php if ($i > 0) { ?>
+							<a class="item-news py-2" href="<?= $item['tenkhongdau'] ?>">
+								<div class="row justify-content-between">
+									<div class="img col-5 img-object">
+										<?= $func->get_photo(array('dir' => $config['theme']['news']['dir'], 'photo' => $item['photo'], 'name' => $item['name'], 'resize' => '150x105x1',)); ?>
+									</div>
+									<div class="info col-7">
+										<h3 class="name line-3"><?= $item['name'] ?></h3>
+										<?php /* ?><p class="desc line-3"><?= $item['descript'] ?></p><?php */ ?>
+									</div>
+								</div>
+							</a>
+						<?php } ?>
+					<?php } ?>
+				<?php } ?>
 			</div>
 		</div>
-	</div>
+</section>
+
+<section class="cover-partner py-md-4 py-2">
+	<div class="container">
+		<div class="title text-center">Khách hàng tiêu biểu</div>
+		<?php if (!empty($slider['partner'])) { ?>
+			<div class="slick__page" :show="6" :autoplay="false" :autoplay="true" :vertical="false">
+				<?php foreach ($slider['partner'] as $i => $item) { ?>
+					<div class="item-partner col">
+						<a href="<?= $item['link'] ?>" target="_blank">
+							<div class="img img-object">
+								<?= $func->get_photo(array('dir' => UPLOAD_PHOTO_L, 'photo' => $item['photo'], 'name' => $item['name'], 'resize' => '250x150x1',)); ?>
+							</div>
+						</a>
+					</div>
+				<?php } ?>
+			</div>
+		<?php } ?>
 </section>

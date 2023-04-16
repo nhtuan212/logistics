@@ -39,7 +39,7 @@
 	
     require_once LIB."controllers.php";
     $category_group = $d->rawQuery("select id, name$lang as name, tenkhongdau, photo, type, level, status from #_category where ".$func->findInSet('display', 'status')." order by number, id desc");
-    $product_group = $d->rawQuery("select id, id_lv1, name$lang as name, place_from$lang as place_from, date_tour, tenkhongdau, photo, price, old_price, type, status from #_product where ".$func->findInSet('hot,display', 'status')." order by number, id desc");
+    $product_group = $d->rawQuery("select id, id_lv1, name$lang as name, place_from$lang as place_from, date_tour, remain, date_from, tenkhongdau, photo, price, old_price, type, status from #_product where ".$func->findInSet('hot,display', 'status')." order by number, id desc");
     $post_group = $d->rawQuery("select id, name$lang as name, descript$lang as descript, tenkhongdau, photo, type, status FROM #_post WHERE ".$func->findInSet('display', 'status')." order by number, id desc");
     $photo_multi = $d->rawQuery("select name$lang as name, type, link, photo, status from #_photo where FIND_IN_SET('display', status) order by number,id desc");
     $static_group = $d->rawQuery("select name$lang as name, descript$lang as descript, content$lang as content, type, photo from #_static where FIND_IN_SET('display', status)");

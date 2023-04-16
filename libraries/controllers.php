@@ -44,26 +44,30 @@ $seo_company = $d->rawQueryOne("select title$lang as title, keywords$lang as key
 require_once LIB . "lang/lang_$fileLang.php";
 
 $arr_sitemap = array(
-	array("com" => "gioi-thieu"),
+	// array("com" => "gioi-thieu"),
 	array("tbl" => "product", "type" => "product", "com" => "san-pham", "level" => $config['theme']['product']['level'],),
 	array("tbl" => "post", "type" => "news", "com" => "tin-tuc", "level" => $config['theme']['news']['level'],),
+	array("tbl" => "post", "type" => "service", "com" => "dich-vu", "level" => $config['theme']['service']['level'],),
 	array("com" => "video"),
 	array("com" => "lien-he"),
 );
 
 switch ($com) {
-	case 'gioi-thieu':
-		Route::get('static@static/static', 'about', _gioithieu);
-		break;
-	case 'san-pham':
-		Route::get('product@product/product', 'product', _sanpham);
+	// case 'gioi-thieu':
+	// 	Route::get('static@static/static', 'about', _gioithieu);
+	// 	break;
+	// case 'san-pham':
+	// 	Route::get('product@product/product', 'product', _sanpham);
+	// 	break;
+	case 'dich-vu':
+		Route::get('post@post/post', 'service', _dichvu);
 		break;
 	case 'tin-tuc':
 		Route::get('post@post/post', 'news', _tintuc);
 		break;
-	case 'video':
-		Route::get('static@static/static', 'video', "Video");
-		break;
+	// case 'video':
+	// 	Route::get('static@static/static', 'video', "Video");
+	// 	break;
 	case 'lien-he':
 		Route::get('static@static/static', 'contact', _lienhe);
 		break;

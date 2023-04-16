@@ -11,7 +11,7 @@
 	}
 	if($pro_detail)
 	{
-		$title_other = _sanphamlienquan;
+		$title_other = 'Tour liên quan';
 		$d->rawQuery("update #_product SET view=view+1 WHERE tenkhongdau=?", array($com));
 		$size = $d->rawQuery("select id, name$lang as name, attribute from #_attribute where FIND_IN_SET('display', status) and id_parent=? and type=? order by number,id desc", array($pro_detail['id'], 'size'));
 		$color = $d->rawQuery("select id, name$lang as name, attribute from #_attribute where FIND_IN_SET('display', status) and id_parent=? and type=? order by number,id desc", array($pro_detail['id'], 'color'));
@@ -33,7 +33,7 @@
 	$page --;
 	$pageSize = $optsetting['qpro_ins'];
 	$bg = $page * $pageSize;
-	$product = $d->rawQuery("select id, name$lang as name, tenkhongdau, descript$lang as descript, photo, price, old_price from #_product where $where and FIND_IN_SET('display', status) order by number,id desc limit $bg, $pageSize");
+	$product = $d->rawQuery("select id, name$lang as name, tenkhongdau, descript$lang as descript, photo, price, old_price, place_from$lang as place_from, date_tour, remain, date_from from #_product where $where and FIND_IN_SET('display', status) order by number,id desc limit $bg, $pageSize");
 	$paging = $func->paging($totalRows, $pageSize);
 
 	// Seo

@@ -133,7 +133,7 @@ else $action = "index.php?com=" . $com . "&act=save&type=" . $type . $p . $id_lv
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
 								</div>
-								<input type="text" class="form-control daterange" name="date_from" value="">
+								<input type="text" class="form-control daterange bg-white" readonly name="date_from" style="cursor:pointer" value="<?= date('d/m/Y', $item['date_from']) ?>">
 							</div>
 						</div>
 

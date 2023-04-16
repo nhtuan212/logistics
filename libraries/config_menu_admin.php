@@ -181,6 +181,7 @@
 		"place_from" => array("text" => "Nơi khởi hành","lang" => true,"ckeditor" => false,"rows" => 1,"type" => 'input',"data_type" => "text","length" => "",),
 		"place_to" => array("text" => "Điểm đến","lang" => true,"ckeditor" => false,"rows" => 1,"type" => 'input',"data_type" => "text","length" => "",),
 		"date_tour" => array("text" => "Số ngày","lang" => false,"ckeditor" => false,"rows" => 1,"type" => 'input',"data_type" => "text","length" => "",),
+		"remain" => array("text" => "Số chỗ còn lại","lang" => true,"ckeditor" => false,"rows" => 1,"type" => 'input',"data_type" => "text","length" => "",),
 		"descript" => array("text" => "Mô tả","lang" => true,"ckeditor" => false,"rows" => 5,"type" => 'textarea',"data_type" => "text","length" => "",),
 		"content" => array("text" => "Nội dung","lang" => true,"ckeditor" => true,"rows" => 5,"type" => 'textarea',"data_type" => "text","length" => "",),
 	);
@@ -252,34 +253,34 @@
 		"content" => array("text" => "Nội dung","lang" => true,"ckeditor" => true,"rows" => 5,"type" => 'textarea',"data_type" => "text","length" => "",),
 	);
 
-	$type_menu = 'utilities';
-	$config['post'][$type_menu]['title'] = 'Tiện ích';
-	$config['post'][$type_menu]['level'] = $config['theme'][$type_menu]['level'];
-	$config['post'][$type_menu]['photo'] = true;
-	$config['post'][$type_menu]['photo_width'] = 500;
-	$config['post'][$type_menu]['photo_height'] = 400;
-	$config['post'][$type_menu]['photo_type'] = FORMAT_IMAGE;
-	$config['post'][$type_menu]['gallery'] = false;
-	$config['post'][$type_menu]['gallery_width'] = 500;
-	$config['post'][$type_menu]['gallery_height'] = 400;
-	$config['post'][$type_menu]['file'] = false;
-	$config['post'][$type_menu]['file_type'] = FORMAT_DOCUMENT;
-	$config['post'][$type_menu]['tags'] = false;
-	$config['post'][$type_menu]['seo'] = true;
-	$config['post'][$type_menu]['slug'] = true;
-	$config['post'][$type_menu]['view'] = true;
-	$config['post'][$type_menu]['attr'] = array("hot"=>"Nổi bật", "display"=>"Hiển thị");
-	$config['post'][$type_menu]['text'] = array
-	(
-		"name" => array("text" => "Tên","lang" => true,"ckeditor" => false,"rows" => 1,"type" => 'input',"validate" => true,"data_type" => "varchar","length" => "(255)",),
-		"descript" => array("text" => "Mô tả","lang" => true,"ckeditor" => false,"rows" => 5,"type" => 'textarea',"data_type" => "text","length" => "",),
-		"content" => array("text" => "Nội dung","lang" => true,"ckeditor" => true,"rows" => 5,"type" => 'textarea',"data_type" => "text","length" => "",),
-	);
+	// $type_menu = 'utilities';
+	// $config['post'][$type_menu]['title'] = 'Tiện ích';
+	// $config['post'][$type_menu]['level'] = $config['theme'][$type_menu]['level'];
+	// $config['post'][$type_menu]['photo'] = true;
+	// $config['post'][$type_menu]['photo_width'] = 500;
+	// $config['post'][$type_menu]['photo_height'] = 400;
+	// $config['post'][$type_menu]['photo_type'] = FORMAT_IMAGE;
+	// $config['post'][$type_menu]['gallery'] = false;
+	// $config['post'][$type_menu]['gallery_width'] = 500;
+	// $config['post'][$type_menu]['gallery_height'] = 400;
+	// $config['post'][$type_menu]['file'] = false;
+	// $config['post'][$type_menu]['file_type'] = FORMAT_DOCUMENT;
+	// $config['post'][$type_menu]['tags'] = false;
+	// $config['post'][$type_menu]['seo'] = true;
+	// $config['post'][$type_menu]['slug'] = true;
+	// $config['post'][$type_menu]['view'] = true;
+	// $config['post'][$type_menu]['attr'] = array("hot"=>"Nổi bật", "display"=>"Hiển thị");
+	// $config['post'][$type_menu]['text'] = array
+	// (
+	// 	"name" => array("text" => "Tên","lang" => true,"ckeditor" => false,"rows" => 1,"type" => 'input',"validate" => true,"data_type" => "varchar","length" => "(255)",),
+	// 	"descript" => array("text" => "Mô tả","lang" => true,"ckeditor" => false,"rows" => 5,"type" => 'textarea',"data_type" => "text","length" => "",),
+	// 	"content" => array("text" => "Nội dung","lang" => true,"ckeditor" => true,"rows" => 5,"type" => 'textarea',"data_type" => "text","length" => "",),
+	// );
 
 	$type_menu = 'support';
 	$config['post'][$type_menu]['title'] = 'Hướng dẫn';
 	$config['post'][$type_menu]['level'] = $config['theme'][$type_menu]['level'];
-	$config['post'][$type_menu]['photo'] = true;
+	$config['post'][$type_menu]['photo'] = false;
 	$config['post'][$type_menu]['photo_width'] = 500;
 	$config['post'][$type_menu]['photo_height'] = 400;
 	$config['post'][$type_menu]['photo_type'] = FORMAT_IMAGE;
@@ -296,7 +297,7 @@
 	$config['post'][$type_menu]['text'] = array
 	(
 		"name" => array("text" => "Tên","lang" => true,"ckeditor" => false,"rows" => 1,"type" => 'input',"validate" => true,"data_type" => "varchar","length" => "(255)",),
-		"descript" => array("text" => "Mô tả","lang" => true,"ckeditor" => false,"rows" => 5,"type" => 'textarea',"data_type" => "text","length" => "",),
+		// "descript" => array("text" => "Mô tả","lang" => true,"ckeditor" => false,"rows" => 5,"type" => 'textarea',"data_type" => "text","length" => "",),
 		"content" => array("text" => "Nội dung","lang" => true,"ckeditor" => true,"rows" => 5,"type" => 'textarea',"data_type" => "text","length" => "",),
 	);
 

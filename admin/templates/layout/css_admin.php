@@ -9,7 +9,7 @@
 <?php if($source == 'attribute' && @$config['attribute'][$type]['color']=='true') { ?>
 	<link href="<?=ASSETS?>plugins/colorpicker/jquery.minicolors.css?<?=$func->random(12)?>" rel="stylesheet">
 <?php } ?>
-<?php if($source == 'order') { ?>
+<?php if($source == 'order' || $source == 'product') { ?>
 	<link href="<?=ASSETS?>plugins/daterangepicker/daterangepicker.css?<?=$func->random(12)?>" rel="stylesheet">
 	<link href="<?=ASSETS?>plugins/rangeSlider/ion.rangeSlider.min.css?<?=$func->random(12)?>" rel="stylesheet">
 <?php } ?>

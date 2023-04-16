@@ -161,8 +161,19 @@
     margin: var(--item__margin);
 }
 
+.item-product .info .price {
+    font-size: 16px;
+}
+
 .item-product .info .price .new-price {
     color: var(--hover__text);
+}
+
+.item-product .info .place_from {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, .7);
 }
 
 .item-product .info .price .old-price {
@@ -175,51 +186,21 @@
 }
 
 .item-hot-product .info .name {
-	height: 42px;
+    height: 42px;
     font-weight: bold;
-}
-
-.item-hot-product .info .place_from {
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    background: rgba(0, 0, 0, .7);
 }
 
 .cover-hot-category .slick-next,
 .cover-hot-category .slick-prev {
-    top: 40%;
+    top: calc(50% - 80px);
 }
 
 
-/*news*/
+/* Book tour */
 
-.cover-news .title {
-    padding-bottom: 10px;
-    text-align: left;
+.cover-book-tour {
+	background: #ddd;
 }
-
-.cover-news .title::before {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: '';
-    width: 100px;
-    height: 3px;
-    background: #000;
-    z-index: 1;
-}
-
-.cover-news .title::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 1px;
-    background: #ddd;
-}
-
 
 /*left category*/
 
@@ -271,21 +252,6 @@
 
 .cover-footer {
     background: var(--color__background);
-}
-
-.title-footer {
-    padding-bottom: 10px;
-    font-size: 18px;
-}
-
-.title-footer:after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: '';
-    width: 50px;
-    height: 2px;
-    background: #fff;
 }
 
 .moit {

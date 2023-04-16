@@ -113,6 +113,11 @@
 		if(@$file = $func->upload_image("file", FORMAT_DOCUMENT, UPLOAD_FILE,$file_name)) $data['file'] = $file;
 		@$data['price'] = ($data['price'] != "") ? $data['price'] : "0";
 		@$data['old_price'] = ($data['old_price'] != "") ? $data['old_price'] : "0";
+		
+		$date_arr = explode("/", $_POST['date_from']);
+		$date_from = $date_arr[0] . "-" . $date_arr[1] . "-" . $date_arr[2];
+		@$data['date_from'] = (!empty($date_from)) ? strtotime($date_from) : "0";
+		
 		@$data['tags_group'] = ($_POST['tags_group']) ? rtrim(implode(",", $_POST['tags_group']), ",") : "";
 		if(!empty($_POST['status']))
 		{

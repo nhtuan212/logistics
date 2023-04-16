@@ -1,0 +1,6 @@
+::1()--insert--counter(1359) (19:21:34 15/04/2023)
+::1()--insert--user_log(35) (19:23:07 15/04/2023)
+::1(admin)--update--product([["","id","=","1"]]) (19:24:24 15/04/2023)
+::1(admin)--update--product([["","id","=","1"]]) (19:24:35 15/04/2023)
+::1(admin)--query--tables(delete from table_seo where id_parent='1' and type='product' and level='0') (19:24:35 15/04/2023)
+::1(admin)--insert--seo(15) (19:24:35 15/04/2023)

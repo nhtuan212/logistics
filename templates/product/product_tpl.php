@@ -5,7 +5,7 @@
 <div class="row">
 	<?php foreach ($product as $i => $item) {
 		$funcLayout->setTbl('product');
-		$funcLayout->setClass('item-custom item-product text-center');
+		$funcLayout->setClass('item-custom item-product');
 		$funcLayout->setHvr('hvr-zoom');
 		$funcLayout->infoTheme($type);
 		$funcLayout->item($item);

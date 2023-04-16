@@ -1,34 +1,36 @@
 <footer class="cover-footer py-4 text-white">
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-footer col-md-4">
-                <aside><?=$func->decode($static['footer']['content'])?></aside>
-                <div class="social d-flex justify-content-start mt-3">
-                    <?php if (!empty($slider['social'])) { ?>
-                        <?php foreach($slider['social'] as $i => $item) { ?> 
-                            <a class="hvr-bounce mr-2" href="<?=$item['link']?>" target="blank">
-                                <?=$func->get_photo(array('dir' => UPLOAD_PHOTO_L,'photo' => $item['photo'],'resize' => '35x35x1',));?>
-                            </a>
-                        <?php } ?>
-                    <?php } ?>
-                </div>
-            </div>
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="col-footer col-md-4">
+				<aside><?= $func->decode($static['footer']['content']) ?></aside>
 
-            <div class="col-footer col-md-2 col-sm-6">
-                <p class="title title-footer text-white text-left">Chính sách</p>
-                <?php if (!empty($custom_post['policy'])) { ?>
-                    <?php foreach ($custom_post['policy'] as $i => $item) { ?>
-                        <a class="name font-weight-normal mt-1" href="<?=$item['tenkhongdau']?>"><?=$item['name']?></a>
-                    <?php } ?>
-                <?php } ?>
-                <?=$func->get_photoSelect('moit', '160x60x1', true)?>
-            </div>
+				<p class="title title-footer text-white text-left mt-3">Kết nối với chúng tôi</p>
+				<div class="social d-flex justify-content-start">
+					<?php if (!empty($slider['social'])) { ?>
+						<?php foreach ($slider['social'] as $i => $item) { ?>
+							<a class="hvr-bounce mr-2" href="<?= $item['link'] ?>" target="blank">
+								<?= $func->get_photo(array('dir' => UPLOAD_PHOTO_L, 'photo' => $item['photo'], 'resize' => '35x35x1',)); ?>
+							</a>
+						<?php } ?>
+					<?php } ?>
+				</div>
+			</div>
 
-            <div class="col-footer col-md-3 col-sm-6">
-                <p class="title title-footer text-white text-left">Fanpage</p>
-                <?=$addon->addonOnline($optsetting['fanpage'], 500, 200, "fanpage-timeline")?>
+			<div class="col-footer col-md-2 col-sm-6">
+				<p class="title title-footer text-white text-left">Hướng dẫn</p>
+				<?php if (!empty($custom_post['support'])) { ?>
+					<?php foreach ($custom_post['support'] as $i => $item) { ?>
+						<a class="name font-weight-normal mt-1" href="<?= $item['tenkhongdau'] ?>"><?= $item['name'] ?></a>
+					<?php } ?>
+				<?php } ?>
+				<?= $func->get_photoSelect('moit', '160x60x1', true) ?>
+			</div>
 
-                <?php /* ?>
+			<div class="col-footer col-md-3 col-sm-6">
+				<p class="title title-footer text-white text-left">Fanpage</p>
+				<?= $addon->addonOnline($optsetting['fanpage'], 500, 200, "fanpage-timeline") ?>
+
+				<?php /* ?>
                 <p class="title title-footer text-white text-left mt-2"><?=_thongketruycap?></p>
                 <div class="statistic-footer">
                     <p class="mt-2">
@@ -49,11 +51,12 @@
                     </p>
                 </div>
                 <?php */ ?>
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 </footer>
 
+<?php /* ?>
 <section class="copyright text-white py-2">
     <div class="container">
         <div class="d-flex justify-content-between flex-wrap">
@@ -68,6 +71,7 @@
         </div>
     </div>
 </section>
+<?php */ ?>
 
 <?php /* ?>
 <?=($com != 'lien-he') ? $addon->addonOnline('iframe', 500, 400, "map") : ""?>
