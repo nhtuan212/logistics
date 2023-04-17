@@ -699,7 +699,7 @@
 		var allLevel = "<?= @$config[$_GET['com']][$type]['level'] ?>";
 		var id = $("." + attr).val();
 		var lv_next = parseInt(level) + 1;
-		if (lv_next > 0) {
+		if (level > 0 && lv_next > 0) {
 			$.ajax({
 				url: 'ajax/ajax_category.php',
 				type: "POST",

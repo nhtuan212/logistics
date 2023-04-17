@@ -52,6 +52,8 @@
                                     if(@$items['id_lv1']) $href .= "&id_lv1=".$items['id_lv1']."";
                                     if(@$items['id_lv2']) $href .= "&id_lv2=".$items['id_lv2']."";
                                     if(@$items['id_lv3']) $href .= "&id_lv3=".$items['id_lv3']."";
+                                    if(@$items['id_place_from']) $href .= "&id_place_from=".$items['id_place_from']."";
+                                    if(@$items['id_place_to']) $href .= "&id_place_to=".$items['id_place_to']."";
                                     if(@$_REQUEST['p']) $href .= "&p=".$_REQUEST['p']."";
                                 ?>
 								<tr>

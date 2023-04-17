@@ -30,6 +30,20 @@ else $action = "index.php?com=" . $com . "&act=save&type=" . $type . $p . $id_lv
 							</div>
 						<?php } ?>
 
+						<?php if ($config['product'][$type]['place_from'] == 'true') { ?>
+							<div class="form-group">
+								<label>Nơi khởi hành</label>
+								<?= get_ajax_category("place_city", "id_place_from", 'city', 0) ?>
+							</div>
+						<?php } ?>
+
+						<?php if ($config['product'][$type]['place_to'] == 'true') { ?>
+							<div class="form-group">
+								<label>Nơi đến</label>
+								<?= get_ajax_category("place_city", "id_place_to", 'city', 0) ?>
+							</div>
+						<?php } ?>
+
 						<?php if ($config['product'][$type]['tags'] == 'true') { ?>
 							<div class="form-group">
 								<label>Tags</label>

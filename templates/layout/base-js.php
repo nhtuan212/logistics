@@ -33,6 +33,8 @@
 	$JSminifier->cacheFile(ASSETS."plugins/slick/slick.js");
 	$JSminifier->cacheFile(ASSETS."plugins/menutoggle/menutoggle.js");
 	$JSminifier->cacheFile(ASSETS."plugins/magiczoomplus/magiczoomplus.js");
+	$JSminifier->cacheFile('admin/'.ASSETS."plugins/daterangepicker/moment.min.js");
+	$JSminifier->cacheFile('admin/'.ASSETS."plugins/daterangepicker/daterangepicker.js");
 	$JSminifier->cacheFile(ASSETS."js/bundle.js");
 	// $JSminifier->cacheFile(ASSETS."js/cart.js");
 	echo $JSminifier->minify();

@@ -23,7 +23,8 @@
 </section>
 
 <section class="cover-book-tour py-md-4 py-3">
-	<div class="container">
+	<div class="container bg-white p-md-4 p-2">
+		<div class="title">Kính mời quý khách chọn thông tin cần tìm kiếm</div>
 		<?php require_once LAYOUT . "newsletter.php"; ?>
 	</div>
 </section>
@@ -68,8 +69,8 @@
 								</div>
 								<div class="info p-2 position-relative">
 									<h3 class="name mb-2 line-2"><?= $item['name'] ?></h3>
-									<?php if (!empty($item['place_from'])) { ?>
-										<div class="place_from text-white p-2"><?= $item['place_from'] ?></div>
+									<?php if (!empty($item['id_place_from'])) { ?>
+										<div class="place_from text-white p-2"><?= $func->get_place('table_place_city', $item['id_place_from']) ?></div>
 									<?php } ?>
 									<?php if (!empty($item['date_tour'])) { ?>
 										<div class="date_tour"><i class="far fa-clock mr-1"></i><?= $item['date_tour'] ?></div>

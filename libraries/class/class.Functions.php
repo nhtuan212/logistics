@@ -35,7 +35,7 @@
         		$sql = '';
         		foreach ($array as $array => $array_item)
         		{
-        			$sql .= 'FIND_IN_SET("'.$array_item.'", status) and ';
+        			$sql .= 'FIND_IN_SET("'.$array_item.'", '.$column.') and ';
         		}
         		$sql = rtrim($sql, 'and ');
         		return $sql;

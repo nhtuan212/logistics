@@ -199,7 +199,15 @@
 /* Book tour */
 
 .cover-book-tour {
-	background: #ddd;
+    background: #ddd;
+}
+
+
+/* newsletter */
+
+.newsletter-item {
+	width: calc(100% / 5);
+	padding: 0 5px;
 }
 
 /*left category*/

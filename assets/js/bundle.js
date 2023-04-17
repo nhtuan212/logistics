@@ -79,6 +79,24 @@ _BASE.totop = function(){
 		$('html, body').animate({scrollTop:0},500);
 	});
 };
+_BASE.daterange = function(){
+	$(document).ready(function () {
+		$('.daterange').daterangepicker({
+			callback: this.render,
+			singleDatePicker: true,
+			autoUpdateInput: false,
+			locale: {
+				format: 'D/M/Y',
+			}
+		});
+		$('.daterange').on('apply.daterangepicker', function (ev, picker) {
+			$(this).val(picker.startDate.format('D/M/Y'));
+		});
+		$('.daterange').on('cancel.daterangepicker', function (ev, picker) {
+			$(this).val(picker.startDate.format('D/M/Y'));
+		});
+	});
+};
 _BASE.hvrMenu = function(){
 	$(".menu ul li").hover(function(){
 		$(this).find('ul:first').addClass('active');
@@ -258,6 +276,7 @@ $(document).ready(function () {
     	// 	loadPagingAjax("ajax/ajax_paging.php?perpage="+_COUNT_PRODUCT+"&type="+type+"&id_lv1="+id_lv1+"&id_lv2="+id_lv2,'.paging-category-'+id_lv1,0);
     	// });
     }
+    _BASE.daterange();
     _BASE.modal();
     _BASE.totop();
     _BASE.hvrMenu();

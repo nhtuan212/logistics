@@ -1,5 +1,7 @@
 <?php
 	$CSSminifier->cacheFile("admin/".ASSETS."plugins/adminlte/adminlte.css");
+	$CSSminifier->cacheFile("admin/".ASSETS."plugins/daterangepicker/daterangepicker.css");
+	$CSSminifier->cacheFile("admin/".ASSETS."plugins/rangeSlider/ion.rangeSlider.min.css");
 	$CSSminifier->cacheFile(ASSETS."plugins/slick/slick.css");
 	$CSSminifier->cacheFile(ASSETS."plugins/magiczoomplus/magiczoomplus.css");
 	$CSSminifier->cacheFile(ASSETS."css/animate.css");

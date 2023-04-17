@@ -56,9 +56,9 @@ switch ($com) {
 	// case 'gioi-thieu':
 	// 	Route::get('static@static/static', 'about', _gioithieu);
 	// 	break;
-	// case 'san-pham':
-	// 	Route::get('product@product/product', 'product', _sanpham);
-	// 	break;
+	case 'san-pham':
+		Route::get('product@product/product', 'product', _sanpham);
+		break;
 	case 'dich-vu':
 		Route::get('post@post/post', 'service', _dichvu);
 		break;
