@@ -1,12 +1,12 @@
 :root
 {
 	--background-active: rgba(0,0,0,0.35);
-	--background-color: #ffae00;
+	--background-color: #ff424e;
 	--background-hover: #fff;
 	--color: #fff;
-	--color-hover: #ffae00;
+	--color-hover: #ff424e;
 	--border-color: #f1f1f1;
-	--border-hover: #ffae00;
+	--border-hover: #ff424e;
 	--border-bottom: rgba(255,255,255,0.3);
 }
 ::placeholder{color: inherit;}

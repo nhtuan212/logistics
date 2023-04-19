@@ -22,7 +22,7 @@
 	</div>
 </section>
 
-<section class="cover-book-tour py-md-4 py-3">
+<section class="cover-book-tour p-3">
 	<div class="container bg-white p-md-4 p-2">
 		<div class="title">Kính mời quý khách chọn thông tin cần tìm kiếm</div>
 		<?php require_once LAYOUT . "newsletter.php"; ?>
@@ -60,11 +60,11 @@
 		<?php if (!empty($hot_category['product'])) { ?>
 			<?php foreach ($hot_category['product'] as $j => $item_category) { ?>
 				<div class="title mt-2"><?= $item_category['name'] ?></div>
-				<div class="row slick__page" :show="5" :autoplay="false" :arrows="true">
+				<div class="row slick__page" :show="5" :autoplay="false" :arrows="true" :lg-item="4" :md-item="3" :sm-item="2" :xs-item="2">
 					<?php foreach ($hot_product['product'] as $i => $item) { ?>
 						<?php if ($item['id_lv1'] == $item_category['id']) { ?>
-							<a class="item-product item-hot-product" href="<?= $item['tenkhongdau'] ?>">
-								<div class="img hvr-zoom">
+							<a class=" item-product item-hot-product" href="<?= $item['tenkhongdau'] ?>">
+								<div class="img hvr-zoom img-object">
 									<?= $func->get_photo(array('dir' => $config['theme']['product']['dir'], 'photo' => $item['photo'], 'name' => $item['name'], 'resize' => '250x200x1',)); ?>
 								</div>
 								<div class="info p-2 position-relative">
@@ -89,14 +89,15 @@
 				</div>
 			<?php } ?>
 		<?php } ?>
+	</div>
 </section>
 
 <section class="cover-news py-4">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-8 mb-3">
 				<div class="d-flex flex-wrap">
-					<div class="col-sm-4">
+					<div class="col-sm-4 mb-2">
 						<p class="title text-md"><?= _tintuc ?> & cẩm nang du lịch</p>
 						<a href="<?= $hot_post['news'][0]['tenkhongdau'] ?>">
 							<div class="info">
@@ -105,7 +106,7 @@
 							</div>
 						</a>
 					</div>
-					<div class="col-sm-8">
+					<div class="col-sm-8 mb-2">
 						<a href="<?= $hot_post['news'][0]['tenkhongdau'] ?>">
 							<div class="img">
 								<?= $func->get_photo(array('dir' => $config['theme']['news']['dir'], 'photo' => $hot_post['news'][0]['photo'], 'name' => $hot_post['news'][0]['name'], 'resize' => '500x350x1',)); ?>
@@ -114,7 +115,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 slick__page mt-n1" :show="3" :autoplay="false" :autoplay="false" :vertical="true">
+			<div class="col-md-4 slick__page mt-n1 mb-3" :show="3" :autoplay="false" :autoplay="false" :vertical="true">
 				<?php if (!empty($hot_post['news'])) { ?>
 					<?php foreach ($hot_post['news'] as $i => $item) { ?>
 						<?php if ($i > 0) { ?>
@@ -140,7 +141,7 @@
 	<div class="container">
 		<div class="title text-center">Khách hàng tiêu biểu</div>
 		<?php if (!empty($slider['partner'])) { ?>
-			<div class="slick__page" :show="6" :autoplay="false" :autoplay="true" :vertical="false">
+			<div class="slick__page" :show="6" :autoplay="false" :autoplay="true" :vertical="false" :lg-item="5" :md-item="4" :sm-item="3" :xs-item="2">
 				<?php foreach ($slider['partner'] as $i => $item) { ?>
 					<div class="item-partner col">
 						<a href="<?= $item['link'] ?>" target="_blank">

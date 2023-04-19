@@ -2,8 +2,8 @@
 	<section class="box-header py-3">
 		<div class="container">
 			<div class="d-flex justify-content-center align-items-center flex-wrap">
-				<a href="" class="logo mx-2"><img src="<?=$func->get_photoSelect('logo', '100x100x1')?>"/></a>
-				<img class="banner" src="<?=$func->get_photoSelect('banner', '300x100x1')?>"/>
+				<a href="" class="logo m-2"><img src="<?=$func->get_photoSelect('logo', '100x100x1')?>"/></a>
+				<img class="banner mb-2" src="<?=$func->get_photoSelect('banner', '300x100x1')?>"/>
 				<!-- <div class="info">
 					<div class="hotline"><?=$optsetting['phone']?></div>
 					<div class="lang mt-2 d-flex justify-content-end">
